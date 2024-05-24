@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="chisiamo.css">
+    <title>Chi Siamo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imm/logo1.png">
+                    <a href="index (1).html" target="_blank"></a>
+                </div>
+                <ul>
+                    <li><a href="index (1).html"><b><h3>HOME</h3></b></a></li>
+                    <li><a href="Assistenza.html"><b><h3>ASSISTENZA</h3></b></a></li>
+                    <li><a href="generi.html"><b><h3>GENERI</h3></b></a></li>
+                </ul>
+                <button><a href="login.html"><b><h3><div class="icon"><i class='bx bx-log-in'></i></div></h3></b></a></button>
+                <button id="menuButton" onclick="openMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <script>
+                    function openMenu() {
+                        const nav = document.querySelector('nav');
+                        nav.classList.toggle('open');
+                    }
+                </script>
+            </nav>
+        </header>
+        <hr class="hr">
+        <div class="contenitore-flex">
+            <div class="testo">
+                <h3>CHI SIAMO <span>NOI</span>?<br>
+                     Siamo la più grande <span>libreria</span> d'Italia! <br>
+                     <span>Vieni</span> a trovarci<br>
+                     Nella nostra <span>Sede!</span></h3>
+            </div>
+        </div>
+        </section>
+        <br>
+        <section>
+            <div class="mappa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357719.51710236835!2d8.6872754324552!3d45.53656970328514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47868b8f6bebe1dd%3A0xdef4de2ec8c9a446!2sReti%20S.p.a.!5e0!3m2!1sit!2sit!4v1716287919637!5m2!1sit!2sit" 
+                height="350px"width="550px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <div class="h1"><h1 align="center">CREATORI DEL SITO</h1></div>
+        <section id="casella">
+            <div class="profile-card">
+                <div class="image">
+                    <img src="imm/omino.png" alt="" class="profile-img">
+                </div>
+                <div class="text-data">
+                    <img src="imm/logo3-small.png" id="logo3"  alt="" >
+                    <span class="name">Luca Agus</span>
+                    <span class="job">Student</span>
+                </div>
+                <div class="media-buttons">
+                    <a href="#" style="background: #4267b2" class="link" data-email="agus.luca@iisgalvanimi.edu.it">
+                        <i class='bx bxl-gmail' id="icona-email" ></i>
+                    </a>
+                    <a href="https://www.instagram.com/_luca.126/?igsh=MWV0eDh6aG15ZDJwYQ%3D%3D" style="background: #e1306c" class="link">
+                        <i class='bx bxl-instagram'></i>
+                    </a>              
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="image">
+                    <img src="imm/omino.png" alt="" class="profile-img">
+                </div>
+                <div class="text-data">
+                    <img src="imm/logo3-small.png" id="logo3"  alt="" >
+                    <span class="name">Francesco Barzaghi</span>
+                    <span class="job">Student</span>
+                </div>
+                <div class="media-buttons">
+                    <a href="#" style="background: #4267b2" class="link" data-email="barzaghi.francesco@iisgalvanimi.edu.it">
+                        <i class='bx bxl-gmail' id="icona-email1"></i>
+                    </a>
+                    <a href="https://www.instagram.com/barza.20161/?igsh=c3U0bmx5dXppZDl4" style="background: #e1306c" class="link">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="image">
+                    <img src="imm/omino.png" alt="" class="profile-img">
+                </div>
+                <div class="text-data">
+                    <img src="imm/logo3-small.png" id="logo3"  alt="" >
+                    <span class="name">Alessio Mancuso</span>
+                    <span class="job">Student</span>
+                </div>
+                <div class="media-buttons">
+                    <a href="#" style="background: #4267b2" class="link" data-email="mancuso.alessio@iisgalvanimi.edu.it">
+                        <i class='bx bxl-gmail' id="icona-email2"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alessio.z9na/?igsh=NzFuMW9oajExYTBk" style="background: #e1306c" class="link">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+          </section>
+          <script>
+            const emailButtons = document.querySelectorAll('.link[data-email]');
+                emailButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const recipientEmail = button.dataset.email;
+                    const mailtoLink = `mailto:${recipientEmail}`;
+                    window.location.href = mailtoLink;
+                });
+                });
+          </script>
+          <div class="rest">
+            <footer>
+                <div class="background">
+                    <svg
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 1600 900"
+                    >
+                        <defs>
+                        <path
+                            id="wave"
+                            fill="rgba(94, 59, 238, 1)"
+                            d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+                            s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+                        />
+                        </defs>
+                        <g>
+                        <use xlink:href="#wave" opacity=".4">
+                            <animateTransform
+                            attributeName="transform"
+                            attributeType="XML"
+                            type="translate"
+                            dur="8s"
+                            calcMode="spline"
+                            values="270 230; -334 180; 270 230"
+                            keyTimes="0; .5; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                            repeatCount="indefinite"
+                            />
+                        </use>
+                        <use xlink:href="#wave" opacity=".6">
+                            <animateTransform
+                            attributeName="transform"
+                            attributeType="XML"
+                            type="translate"
+                            dur="6s"
+                            calcMode="spline"
+                            values="-270 230;243 220;-270 230"
+                            keyTimes="0; .6; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                            repeatCount="indefinite"
+                            />
+                        </use>
+                        <use xlink:href="#wave" opacty=".9">
+                            <animateTransform
+                            attributeName="transform"
+                            attributeType="XML"
+                            type="translate"
+                            dur="4s"
+                            calcMode="spline"
+                            values="0 230;-140 200;0 230"
+                            keyTimes="0; .4; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                            repeatCount="indefinite"
+                            />
+                        </use>
+                        </g>
+                    </svg>
+                </div>
+                <section>
+                <ul class="socials">
+                    <li><a href="https://mail.google.com/mail/?tab=rm&ogbl"><i class="bx bx-envelope" ></i></a></li>
+                    <li><a href="chiSiamo.html"><i class='bx bx-group'></i></a></li>
+                    <li><a href="#"><i class="bx bx-info-circle" ></i></a></li>
+                </ul>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">chi siamo?</a></li>
+                    <li><a href="#">assistenza</a></li>
+                </ul>
+                <p class="legal">© 2024 All rights reserved</p>
+                </section>
+            </footer>
+        </div>
+</body>
+</html>

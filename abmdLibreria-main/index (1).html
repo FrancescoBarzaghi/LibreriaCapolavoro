@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imm/logo1.png">
+                <a href="index (1).html" target="_blank"></a>
+            </div>
+            <ul>
+                <li><a href="Assistenza.html"><b><h3>ASSISTENZA</h3></b></a></li>
+                <li><a href="generi.html"><b><h3>GENERI</h3></b></a></li>
+                <li><a href="chisiamo.html"><b><h3>CHI SIAMO?</h3></b></a></li>
+            </ul>
+            <button><a href="login.html"><b><h3><div class="icon"><i class='bx bx-log-in'></i></div></h3></b></a></button>
+            <button id="menuButton" onclick="openMenu()">
+                <i class='bx bx-menu'></i>
+            </button>
+            <script>
+                function openMenu() {
+                    const nav = document.querySelector('nav');
+                    nav.classList.toggle('open');
+                }
+            </script>
+        </nav>
+        <div class="main" id="main">
+            <div class="left">
+                <h5>MBA</h5>
+                <h3>La biblioteca <span>online</span> con il più vasto catalogo di sempre</h3>
+                <p>
+                    "Con MBA, ogni pagina letta è un passo verso il successo: <br />
+                     scopri, impara e conquista il tuo futuro!"
+            </div>
+            <label class="search-label">
+                <button type="submit" class="search-button" onclick="formget()">
+                  <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                      <path d="M55.146 51.887 41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" fill="currentColor" data-original="#000000" class=""></path>
+                    </g>
+                  </svg>
+                </button>
+                <input type="text" name="text" class="input_text" id="nome" required="" placeholder="Cerca...">
+                <kbd class="slash-icon">/</kbd>
+            </label>  
+            <button class="btn-primary" onclick="toggleAddBook()">CREA LIBRO</button>   
+            <div id="AddBookForm">
+                <form id="bookinfo">
+                    <div class="form-group">
+                        <br>
+                    <div class="form-item">
+                        <label for="titolo">Inserisci il titolo:</label>
+                        <input class="form-control" type="text" id="titolo" name="titolo"  value="" required />
+                    </div>
+                    <div class="form-item">
+                        <label for="prezzo">Inserisci il prezzo:</label>
+                        <input class="form-control" type="text" id="prezzo" name="prezzo" value="" required />
+                    </div>
+                    <div class="form-item">
+                        <label for="isbn">Inserisci il codice ISBN:</label>
+                        <input class="form-control" type="text" id="isbn" name="isbn" value="" required />
+                    </div>
+                    <div class="form-item">
+                        <label for="genere">Inserisci il genere:</label>
+                        <input class="form-control" type="text" id="genere" name="isbn" value="" required />
+                    </div>
+                    </div>
+                </form>
+                <br>
+                <button class="btn btn-primary submitBook">Invia</button>
+            </div>
+            <button class="btn btn-primary" onclick="formelimina()">Elimina libro</button>
+            <form id="elimina">
+                <div class="elimina">
+                    <form id="deleteBookForm">
+                        <input type="text" id="bookId" placeholder="Enter Book ID" required />
+                        <button type="button" class="btn btn-primary" id="elim">Delete Book</button>
+                    </form>
+                </div>
+            </form>        
+        </div>
+    </header>
+    <div class="conte1">
+        <div class="item" style="width: 400px; text-align: center;">
+            <form id="get">
+                <img src="#" alt="immagine" class="immagine">
+                <br/>
+                <h2 class="titolo"></h2>
+                <br/>
+                <p class="id"></p>
+                <br/>
+                <p class="genere"></p>
+                <br/>
+                <p class="prezzo"></p>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="skills" id="skills">
+        <h5>#</h5>
+        <h3>I NOSTRI SERVIZI</h3>
+        <div class="skill-items">
+            <div class="item">
+                <div class="icon"><i class='bx bx-directions'></i></div>
+                <h4>Ricerca libri</h4>
+                <p>
+                    "Con MBA, ogni pagina che sfogli è un nuovo traguardo verso il successo: qui troverai l'ispirazione per imparare, scoprire e conquistare il tuo futuro!"
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bx-bookmark-heart'></i></div>
+                <h4>Suggeriti</h4>
+                <p> 
+                    "Con MBA, ogni libro consigliato è una nuova opportunità di crescita: esplora, impara e conquista il tuo futuro, pagina dopo pagina!"
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bxl-figma'></i></i></div>
+                <h4>Catalogo</h4>
+                <p>
+                    Il catalogo di MBA offre libri per tutti i gusti e interessi, garantendo un'esperienza di lettura coinvolgente e completa.
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon"><i class='bx bx-question-mark'></i></div>
+                <h4>Domande frequenti</h4>
+                <p>
+                    Il nostro servizio di assistenza è qui per rispondere prontamente e adattarsi alle tue esigenze con soluzioni personalizzate.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="about" id="about">
+        <div class="all">
+            <div class="right">
+                <h3>La nostra Filosofia</h3>
+                <p>
+                    La filosofia di lettura di MBA si basa sull'idea che 
+                    ogni libro sia un portale verso nuove idee, esperienze e 
+                    scoperte. Crediamo nel potere trasformativo della lettura, 
+                    che arricchisce la mente e l'anima, stimolando la riflessione 
+                    e l'immaginazione. In un mondo in continua evoluzione, la 
+                    lettura ci offre una via per comprendere meglio il mondo che 
+                    ci circonda e per crescere come individui. Per noi, ogni pagina 
+                    letta è un viaggio verso la conoscenza e la crescita personale.
+                </p>
+                <p>
+                    Leggere apre porte a mondi infiniti. Scegli un libro 
+                    e immergiti in una nuova avventura ogni volta che 
+                    apri una pagina. Lasciati trasportare dalle parole e 
+                    lascia che la tua mente esplori territori sconosciuti. 
+                    Ogni libro è un tesoro, pronto ad arricchire la tua vita. 
+                    Leggi e lasciati ispirare!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <div class="header">
+            <div class="info">
+                <h5>libri</h5>
+                <h3>IN EVIDENZA</h3>
+            </div>
+        </div>
+        <div class="portfo-items">
+            <div class="portfolio">
+                <div class="scroll">
+                    <div class="portfo-items">
+                        <button class="nav prev"><</button>
+                        <section class="slider-container">
+                            <div class="slider-track">
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://alessandria.bookrepublic.it/api/books/9788809815896/cover" alt="libro 1">
+                                        <div class="info">
+                                            <h2 class="titolo1"></h2>
+                                            <br/>
+                                            <p class="id1"></p>
+                                            <p class="genere1"></p>
+                                            <p class="prezzo1"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://images-na.ssl-images-amazon.com/images/I/71sbLSDNoWL._SL1132_.jpg" alt="libro 2">
+                                        <div class="info">
+                                            <h2 class="titolo2"></h2>
+                                            <br/>
+                                            <p class="id2"></p>
+                                            <p class="genere2"></p>
+                                            <p class="prezzo2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://www.havocpoint.it/wp-content/uploads/2020/09/giro_mondo_n_ed_cover_HR_rgb.jpg" alt="libro 3">
+                                        <div class="info">
+                                            <h2 class="titolo3"></h2>
+                                            <br/>
+                                            <p class="id3"></p>
+                                            <p class="genere3"></p>
+                                            <p class="prezzo3"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://1.bp.blogspot.com/-VXkps2kyguw/Xn9RjOIsxnI/AAAAAAABBvY/OUlrJwsac7Uw4SDq2zv7VdxqRO-V2N6pACLcBGAsYHQ/s1600/r0JB_01_01.jpg" alt="libro 4">
+                                        <div class="info">
+                                            <h2 class="titolo4"></h2>
+                                            <br/>
+                                            <p class="id4"></p>
+                                            <p class="genere4"></p>
+                                            <p class="prezzo4"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501175466/it-9781501175466_hr.jpg" alt="libro 1">
+                                        <div class="info">
+                                            <h2 class="titolo5"></h2>
+                                            <br/>
+                                            <p class="id5"></p>
+                                            <p class="genere5"></p>
+                                            <p class="prezzo5"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://www.multiplexalbenga.it/media/content/3929/assassinio.jpg " alt="libro 2">
+                                        <div class="info">
+                                            <h2 class="titolo6"></h2>
+                                            <br/>
+                                            <p class="id6"></p>
+                                            <p class="genere6"></p>
+                                            <p class="prezzo6"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://img.libraccio.it/images/9788845275739_0_500_0_75.jpg" alt="libro 3">
+                                        <div class="info">
+                                            <h2 class="titolo7"></h2>
+                                            <br/>
+                                            <p class="id7"></p>
+                                            <p class="genere7"></p>
+                                            <p class="prezzo7"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <div class="item">
+                                        <img src="https://i.pinimg.com/originals/8b/5e/ae/8b5eae57524f3f6e80056b4375de8448.jpg" alt="libro 1">
+                                        <div class="info">
+                                            <h2 class="titolo8"></h2>
+                                            <br/>
+                                            <p class="id8"></p>
+                                            <p class="genere8"></p>
+                                            <p class="prezzo8"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <button class="nav next">></button>
+                    </div>
+                    <script>
+                        const prevButton = document.querySelector('.prev');
+                        const nextButton = document.querySelector('.next');
+                        const sliderTrack = document.querySelector('.slider-track');
+                        const slides = document.querySelectorAll('.slide');
+                        const slidesToShow = 4; // Number of slides to show at a time
+                        let currentIndex = 0;
+
+                        function updateSlider() {
+                            const slideWidth = slides[0].clientWidth;
+                            const offset = currentIndex * slideWidth;
+                            sliderTrack.style.transform = `translateX(-${offset}px)`;
+                        }
+
+                        prevButton.addEventListener('click', () => {
+                            if (currentIndex > 0) {
+                                currentIndex--;
+                                updateSlider();
+                            }
+                        });
+
+                        nextButton.addEventListener('click', () => {
+                            if (currentIndex < slides.length - slidesToShow) {
+                                currentIndex++;
+                                updateSlider();
+                            }
+                        });
+
+                        let isDragging = false;
+                        let startPosition = 0;
+                        let currentTranslate = 0;
+                        let prevTranslate = 0;
+                        let animationID = 0;
+                        let currentIndexDrag = 0;
+
+                        sliderTrack.addEventListener('mousedown', dragStart);
+                        sliderTrack.addEventListener('mouseup', dragEnd);
+                        sliderTrack.addEventListener('mouseleave', dragEnd);
+                        sliderTrack.addEventListener('mousemove', drag);
+
+                        sliderTrack.addEventListener('touchstart', dragStart);
+                        sliderTrack.addEventListener('touchend', dragEnd);
+                        sliderTrack.addEventListener('touchmove', drag);
+
+                        function getPositionX(event) {
+                            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+                        }
+
+                        function dragStart(event) {
+                            isDragging = true;
+                            startPosition = getPositionX(event);
+                            animationID = requestAnimationFrame(animation);
+                        }
+
+                        function dragEnd() {
+                            isDragging = false;
+                            cancelAnimationFrame(animationID);
+
+                            const movedBy = currentTranslate - prevTranslate;
+
+                            if (movedBy < -100 && currentIndex < slides.length - slidesToShow) {
+                                currentIndex++;
+                            }
+
+                            if (movedBy > 100 && currentIndex > 0) {
+                                currentIndex--;
+                            }
+
+                            updateSliderPosition();
+                        }
+
+                        function drag(event) {
+                            if (isDragging) {
+                                const currentPosition = getPositionX(event);
+                                currentTranslate = prevTranslate + currentPosition - startPosition;
+                            }
+                        }
+
+                        function animation() {
+                            setSliderPosition();
+                            if (isDragging) requestAnimationFrame(animation);
+                        }
+
+                        function setSliderPosition() {
+                            sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+                        }
+
+                        function updateSliderPosition() {
+                            const slideWidth = slides[0].clientWidth;
+                            currentTranslate = currentIndex * -slideWidth;
+                            prevTranslate = currentTranslate;
+                            setSliderPosition();
+                        }
+
+                        window.addEventListener('resize', updateSlider);
+                        updateSlider(); // Initialize slider position on page load
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback" id="feedback">
+        <h5>Utenti</h5>
+        <h3>DOMANDE FREQUENTI</h3>
+        <div class="customers">
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="dropDown1()" class="dropbtn1"><b><h4> Mediamente In quanto tempo arriva il libro ? </h4></b></button>
+                        <div id="myDropdown1" class="dropdown-content1">
+                            <p>Solitamente i libri spediti in Italia arrivano 5 giorni dopo aver effettuato l'ordine!</p>
+                        </div>
+                    </div>
+                </li>
+                <li> 
+                    <div class="dropdown">
+                        <button onclick="dropDown2()" class="dropbtn2"><b><h4>Come posso accedere alla mia libreria digitale su MBA da diversi dispositivi?</h4></b></button>
+                        <div id="myDropdown2" class="dropdown-content2">
+                          <p>Per accedere alla tua libreria digitale su MBA da diversi dispositivi, basta effettuare l'accesso con lo stesso account.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="dropDown3()" class="dropbtn3"><b><h4>Quali sono le opzioni di pagamento disponibili per l'acquisto di libri su MBA?</h4></b></button>
+                        <div id="myDropdown3" class="dropdown-content3">
+                            <p>Le opzioni di pagamento disponibili su MBA includono carte di credito, carte di debito e altri metodi di pagamento elettronico.</p>
+                          </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="dropDown4()" class="dropbtn4"><b><h4>Posso leggere i libri offline con MBA?</h4></b></button>
+                        <div id="myDropdown4" class="dropdown-content4">
+                            <p>Sì, è possibile leggere i libri offline con MBA. Dopo aver scaricato un libro sulla tua app, puoi accedervi senza connessione Internet.
+                            </p>
+                          </div>
+                    </div>
+                </li>
+            </ul>
+            <script>
+                function dropDown2() {
+                    document.getElementById("myDropdown2").classList.toggle("show");
+                    window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn2')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content2");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                    }
+                }
+                function dropDown1() {
+                    document.getElementById("myDropdown1").classList.toggle("show");
+                    window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn1')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content1");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                    }
+                }
+                function dropDown3() {
+                    document.getElementById("myDropdown3").classList.toggle("show");
+                    window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn3')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content3");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                    }
+                }
+                function dropDown4() {
+                    document.getElementById("myDropdown4").classList.toggle("show");
+                    window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn4')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content4");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="rest">
+        <footer>
+            <div class="background">
+                <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 1600 900"
+                >
+                    <defs>
+                    <path
+                        id="wave"
+                        fill="rgba(94, 59, 238, 1)"
+                        d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+                        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+                    />
+                    </defs>
+                    <g>
+                    <use xlink:href="#wave" opacity=".4">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="8s"
+                        calcMode="spline"
+                        values="270 230; -334 180; 270 230"
+                        keyTimes="0; .5; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    <use xlink:href="#wave" opacity=".6">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="6s"
+                        calcMode="spline"
+                        values="-270 230;243 220;-270 230"
+                        keyTimes="0; .6; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    <use xlink:href="#wave" opacty=".9">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="4s"
+                        calcMode="spline"
+                        values="0 230;-140 200;0 230"
+                        keyTimes="0; .4; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    </g>
+                </svg>
+            </div>
+            <section>
+            <ul class="socials">
+                <li><a href="https://mail.google.com/mail/?tab=rm&ogbl"><i class="bx bx-envelope" ></i></a></li>
+                <li><a href="chisiamo.html"><i class='bx bx-group'></i></a></li>
+                <li><a href="Assistenza.html"><i class="bx bx-info-circle" ></i></a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="index (1).html">Home</a></li>
+                <li><a href="chisiamo.html">chi siamo?</a></li>
+                <li><a href="Assistenza.html">assistenza</a></li>
+            </ul>
+            <p class="legal">© 2024 All rights reserved</p>
+            </section>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+    <script src="accesso.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

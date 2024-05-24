@@ -1,0 +1,109 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #352880;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: #5e3bee;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #7253f0;
+}
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.message.user {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: right;
+    align-self: flex-end;
+}
+.message.bot {
+    background-color: #5e3bee;
+    color: #ffffff;
+    align-self: flex-start;
+}
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #7253f0;
+}
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #5e3bee;
+    outline: none;
+    font-size: 16px;
+}
+#send-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #5e3bee;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#send-button:hover {
+    background-color: #577fad;
+}
+.footer {
+    background-color: #5e3bee;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+.button-professionale {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #5e3bee;
+    color: #fff;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button-professionale:hover {
+    background-color:#577fad;
+}

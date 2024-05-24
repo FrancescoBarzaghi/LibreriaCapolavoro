@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistenza Clienti</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Assistenza.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imm/logo1.png">
+                <a href="index (1).html" target="_blank"></a>
+            </div>
+            <ul>
+                <li><a href="index (1).html"><b><h3>HOME</h3></b></a></li>
+                <li><a href="generi.html"><b><h3>GENERI</h3></b></a></li>
+                <li><a href="chisiamo.html"><b><h3>CHI SIAMO?</h3></b></a></li>
+            </ul>
+            <button><a href="login.html"><b><h3><div class="icon"><i class='bx bx-log-in'></i></div></h3></b></a></button>
+            <button id="menuButton" onclick="openMenu()">
+                <i class='bx bx-menu'></i>
+            </button>
+            <script>
+                function openMenu() {
+                    const nav = document.querySelector('nav');
+                    nav.classList.toggle('open');
+                }
+            </script>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="main">
+            <h2>Informazioni di Contatto</h2>
+            <p>Se hai bisogno di assistenza, puoi contattarci tramite i seguenti metodi:</p>
+            <ul>
+                <li>Email: <a href="mailto:mancuso.alessio@iisgalvanimi.edu.it">mancuso.alessio@iisgalvanimi.edu.it</a>
+                </li>
+                <li>Telefono: +39 123 456 789</li>
+                <li>Indirizzo: Via Roma 1, 00100 Roma, Italia</li>
+            </ul>
+            <h2>Invia una Richiesta di Assistenza</h2>
+            <form onsubmit="return sendEmail();">
+                <div class="form-group">
+                    <label for="userName">Nome:</label>
+                    <input type="text" id="userName" name="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue">Descrivi il tuo problema:</label>
+                    <textarea id="issue" name="issue" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Invia</button>
+                    <button type="button" class="copy-button" onclick="copyToClipboard()">Copia</button>
+                </div>
+            </form>
+        </div>
+        <div class="faq">
+            <h2>Domande Frequenti (FAQ)</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">Come posso resettare la mia password?</h3>
+                <p>Per resettare la tua password, vai alla pagina di login e clicca su "Password dimenticata". Segui le
+                    istruzioni per ricevere un'email di reset.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">Come posso contattare il supporto tecnico?</h3>
+                <p>Puoi contattare il supporto tecnico inviando un'email a mancuso.alessio@iisgalvanimi.edu.it o
+                    chiamando il numero +39 123 456 789.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">Quali sono gli orari di assistenza?</h3>
+                <p>L'assistenza è disponibile dal lunedì al venerdì, dalle 9:00 alle 18:00.</p>
+            </div>
+        </div>
+        <a href="ChatBot.html"><button class="chatbot-button">Apri ChatBot</button>
+    </div>
+    <div class="rest">
+        <footer>
+            <div class="background">
+                <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 1600 900"
+                >
+                    <defs>
+                    <path
+                        id="wave"
+                        fill="rgba(94, 59, 238, 1)"
+                        d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+                        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+                    />
+                    </defs>
+                    <g>
+                    <use xlink:href="#wave" opacity=".4">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="8s"
+                        calcMode="spline"
+                        values="270 230; -334 180; 270 230"
+                        keyTimes="0; .5; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    <use xlink:href="#wave" opacity=".6">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="6s"
+                        calcMode="spline"
+                        values="-270 230;243 220;-270 230"
+                        keyTimes="0; .6; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    <use xlink:href="#wave" opacty=".9">
+                        <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="4s"
+                        calcMode="spline"
+                        values="0 230;-140 200;0 230"
+                        keyTimes="0; .4; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite"
+                        />
+                    </use>
+                    </g>
+                </svg>
+            </div>
+            <section>
+                <ul class="socials">
+                    <li><a href="https://mail.google.com/mail/?tab=rm&ogbl"><i class="bx bx-envelope" ></i></a></li>
+                    <li><a href="chisiamo.html"><i class='bx bx-group'></i></a></li>
+                    <li><a href="Assistenza.html"><i class="bx bx-info-circle" ></i></a></li>
+                </ul>
+                <ul class="links">
+                    <li><a href="index (1).html">Home</a></li>
+                    <li><a href="chisiamo.html">chi siamo?</a></li>
+                    <li><a href="Assistenza.html">assistenza</a></li>
+                </ul>
+            <p class="legal">© 2024 All rights reserved</p>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
